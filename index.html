@@ -6,6 +6,13 @@
 <title>Carolina Sánchez · Carolina Sanchez Group LLC</title>
 <meta name="description" content="Negocios digitales e inteligencia artificial para mujeres latinas que quieren crear su propio ingreso. Carolina Sanchez Group LLC, Florida.">
 <meta property="og:title" content="Carolina Sánchez · Negocios digitales con IA">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://carolinasanchezgroup.com/">
+<meta property="og:image" content="https://carolinasanchezgroup.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="carolina-3.jpg">
 <meta property="og:description" content="Descubre qué negocio digital puedes empezar con lo que ya sabes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -539,7 +546,9 @@ document.addEventListener('click',e=>{const t=e.target.closest('[data-track]');i
 document.getElementById('leadForm').addEventListener('submit',async e=>{
   e.preventDefault(); const f=e.target; const btn=f.querySelector('button');
   btn.disabled=true;
-  try{await fetch("https://formsubmit.co/ajax/carolinasanchezgroup@gmail.com",{method:"POST",headers:{Accept:"application/json"},body:new FormData(f)});}catch(err){}
+  let sent=false;
+  try{const r=await fetch("https://formsubmit.co/ajax/carolinasanchezgroup@gmail.com",{method:"POST",headers:{Accept:"application/json"},body:new FormData(f)});const j=await r.json();sent=(j.success===true||j.success==="true");}catch(err){}
+  if(!sent){track('form_error');console.warn('Form not delivered');}
   document.getElementById('okMsg').style.display='block'; btn.style.display='none';
   document.getElementById('dlBtn').style.display='inline-flex'; document.getElementById('dlQuiz').style.display='inline-flex';
   track('guide_unlocked');
