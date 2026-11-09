@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carolina Sánchez · Carolina Sanchez Group LLC</title>
+<meta name="description" content="Negocios digitales e inteligencia artificial para mujeres latinas que quieren crear su propio ingreso. Carolina Sanchez Group LLC, Florida.">
+<meta property="og:title" content="Carolina Sánchez · Negocios digitales con IA">
+<meta property="og:description" content="Descubre qué negocio digital puedes empezar con lo que ya sabes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F5; --card:#FFFFFF; --ink:#163A3A; --muted:#55666A; --line:#E7E0D4;
+  --gold:#B8963A; --violet:#0F5C5C; --blue:#2F8A84; --pink:#D9B86A;
+  --grad:linear-gradient(100deg,#0F5C5C,#2F8A84 60%,#C9A55A);
+  --radius:20px; --shadow:0 10px 30px rgba(31,42,68,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-grad{background:var(--grad);color:#fff;box-shadow:0 8px 24px rgba(15,92,92,.25)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+
+/* top bar */
+.topbar{background:var(--grad);color:#fff;text-align:center;font-size:13.5px;padding:9px 16px;font-weight:500}
+.topbar a{color:#fff;font-weight:600}
+header{position:sticky;top:0;z-index:50;background:rgba(250,248,245,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:600;text-decoration:none}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:14px}
+.nav-links a{text-decoration:none;color:var(--muted)}
+.lang{display:flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;padding:6px 12px;font:600 12px Montserrat;cursor:pointer;color:var(--muted)}
+.lang button.on{background:var(--ink);color:#fff}
+@media(max-width:820px){.nav-links a{display:none}}
+
+/* hero */
+.hero{position:relative;padding:70px 0 80px;overflow:hidden}
+.glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:float 14s ease-in-out infinite}
+.g1{width:420px;height:420px;background:#9CCFC6;top:-120px;right:-80px}
+.g2{width:360px;height:360px;background:#EAD9AE;bottom:-140px;left:-100px;animation-delay:-5s}
+@keyframes float{50%{transform:translate(30px,25px) scale(1.08)}}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(40px,6.2vw,74px);margin:16px 0 20px}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:540px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:28px;font-size:13px;color:var(--muted)}
+.trust b{color:var(--ink)}
+.photo-wrap{position:relative;justify-self:center}
+.bigname{position:absolute;inset:auto -40px 40px -40px;font-family:"Cormorant Garamond",serif;font-size:96px;font-weight:600;color:transparent;-webkit-text-stroke:1.2px rgba(201,162,39,.45);text-align:center;letter-spacing:.06em;pointer-events:none}
+.photo{position:relative;width:min(380px,82vw);aspect-ratio:4/5;border-radius:200px 200px 28px 28px;background:linear-gradient(160deg,#E6F1EF,#F5F1E8);box-shadow:var(--shadow);overflow:hidden;border:6px solid #fff}
+.photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
+.photo .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:90px;color:#fff;background:var(--grad);opacity:.85}
+.chip{position:absolute;z-index:3;background:#fff;border-radius:14px;padding:10px 14px;box-shadow:var(--shadow);font-size:13px;font-weight:600;display:flex;gap:8px;align-items:center;animation:bob 5s ease-in-out infinite}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--grad);display:inline-block}
+.c1{left:-30px;top:60px}.c2{right:-24px;bottom:90px;animation-delay:-2.5s}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@media(max-width:860px){.hero{padding:40px 0 60px}.hero-grid{grid-template-columns:1fr;gap:36px}.bigname{font-size:64px}.c1{left:-8px}.c2{right:-8px}}
+
+section{padding:80px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 46px}
+.sec-head h2{font-size:clamp(32px,4.4vw,50px);margin:10px 0 14px}
+.sec-head p{color:var(--muted)}
+
+/* hello */
+.hello{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hello-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+.hello h2{font-size:clamp(32px,4vw,46px);margin:10px 0 18px}
+.hello p{color:var(--muted);margin-bottom:14px;font-size:17px}
+.sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:28px;color:var(--ink)}
+.hello-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:24px;box-shadow:var(--shadow);display:block;margin-bottom:-40px}
+.quote{background:var(--bg);border-radius:var(--radius);padding:34px;position:relative;margin:0 18px;box-shadow:var(--shadow)}
+.quote:before{content:"“";position:absolute;top:-30px;left:20px;font:120px "Cormorant Garamond";background:var(--grad);-webkit-background-clip:text;color:transparent}
+.quote p{font-family:"Cormorant Garamond",serif;font-size:26px;line-height:1.3;color:var(--ink)}
+@media(max-width:860px){.hello-grid{grid-template-columns:1fr}}
+
+/* paths */
+.paths{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.path{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;gap:12px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.path:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.path:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
+.path .need{font-size:13px;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+.path h3{font-size:28px}
+.path p{color:var(--muted);font-size:15px;flex:1}
+.tag{align-self:flex-start;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:#E6F1EF;color:#0F5C5C}
+@media(max-width:860px){.paths{grid-template-columns:1fr}}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.step{text-align:center;padding:10px}
+.step .n{width:56px;height:56px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font:600 24px "Cormorant Garamond";color:#fff;background:var(--grad)}
+.step h3{font-size:24px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15px}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc{background:rgba(255,255,255,.75);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.svc .ic svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8}
+.svc h3{font-size:22px;margin-bottom:6px}
+.svc p{font-size:14px;color:var(--muted)}
+@media(max-width:960px){.services{grid-template-columns:1fr 1fr}}@media(max-width:560px){.services{grid-template-columns:1fr}}
+
+/* about creds */
+.creds{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}
+.cred{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}
+.cred b{display:block;font:600 30px "Cormorant Garamond";background:var(--grad);-webkit-background-clip:text;color:transparent}
+.cred span{font-size:13px;color:var(--muted)}
+@media(max-width:760px){.creds{grid-template-columns:1fr 1fr}}
+
+/* lead */
+.lead-box{background:#fff;border-radius:28px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;border:1px solid var(--line)}
+.lead-left{padding:44px;background:linear-gradient(160deg,#EEF5F3,#F5F1E8 60%,#FAF6EC)}
+.lead-left h2{font-size:clamp(30px,3.6vw,42px);margin:10px 0 14px}
+.lead-left ul{list-style:none;margin-top:18px}
+.lead-left li{padding-left:28px;position:relative;margin-bottom:10px;color:var(--ink)}
+.lead-left li:before{content:"✓";position:absolute;left:0;color:var(--violet);font-weight:700}
+form{padding:44px;display:flex;flex-direction:column;gap:14px}
+label{font-size:13px;font-weight:600}
+input,textarea,select{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;font:15px Montserrat;background:var(--bg);color:var(--ink)}
+input:focus,textarea:focus{outline:none;border-color:var(--violet)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--muted);font-weight:400}
+.consent input{width:auto;margin-top:3px}
+.ok{display:none;background:#F1FAF4;border:1px solid #BFE5CC;color:#1E7D4B;border-radius:12px;padding:14px;font-size:14px}
+@media(max-width:860px){.lead-box{grid-template-columns:1fr}.lead-left,form{padding:30px 22px}}
+
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary:after{content:"+";font-size:22px;color:var(--violet);line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--muted);margin-top:10px;font-size:15px}
+
+/* contact & footer */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+.card h3{font-size:26px;margin-bottom:12px}
+.card p{color:var(--muted);margin-bottom:6px}
+@media(max-width:760px){.contact{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding:34px 0 100px;font-size:13px;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+.foot a{margin-left:16px}
+.disclaimer{margin-top:18px;font-size:12px;line-height:1.5;max-width:900px}
+
+/* whatsapp */
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);transition:transform .2s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar" data-i18n-html="topbar">🎁 Gratis: descubre qué negocio digital puedes empezar con lo que ya sabes · <a href="#regalo" data-track="topbar_gift">Hazlo aquí</a></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">Carolina <span>Sánchez</span></a>
+    <nav class="nav-links">
+      <a href="#caminos" data-i18n="nav_paths">Empieza aquí</a>
+      <a href="#servicios" data-i18n="nav_services">Servicios</a>
+      <a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a>
+      <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+      <div class="lang" role="group" aria-label="Idioma">
+        <button data-lang="es" class="on">ES</button><button data-lang="en">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="eyebrow" data-i18n="hero_eyebrow">Negocios digitales · Inteligencia artificial</div>
+      <h1 data-i18n-html="hero_title">Crea tu propio ingreso con un negocio digital e <span class="grad-text">inteligencia artificial</span></h1>
+      <p class="lead" data-i18n="hero_lead">Empezar de nuevo después de los 40 no es empezar tarde. Es empezar con experiencia. Te ayudo a descubrir lo que ya sabes hacer y a convertirlo en un negocio digital, paso a paso y con herramientas de IA.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-grad" href="https://descubreconcarolina.com/" target="_blank" rel="noopener" data-track="hero_quiz" data-i18n="hero_cta1">Descubre tu negocio en 5 minutos →</a>
+        <a class="btn btn-ghost" href="#caminos" data-track="hero_paths" data-i18n="hero_cta2">Ver por dónde empezar</a>
+      </div>
+      <div class="trust">
+        <span data-i18n-html="trust1">🇺🇸 <b>Empresa registrada</b> en Florida</span>
+        <span data-i18n-html="trust2">💬 <b>Español e inglés</b></span>
+        <span data-i18n-html="trust3">✨ <b>Gratis</b> para empezar</span>
+      </div>
+    </div>
+    <div class="photo-wrap reveal">
+      <div class="bigname">CAROLINA</div>
+      <div class="photo">
+        <!-- Reemplazar: poner la foto como carolina.jpg en la misma carpeta -->
+        <img src="carolina.jpg" alt="Carolina Sánchez" onerror="this.remove()">
+        <div class="ph">CS</div>
+      </div>
+      <div class="chip c1"><i></i><span data-i18n="chip1">Lo que ya sabes vale</span></div>
+      <div class="chip c2"><i></i><span data-i18n="chip2">La IA es tu herramienta</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HELLO -->
+<section class="hello" id="sobre-mi">
+  <div class="wrap hello-grid">
+    <div class="reveal">
+      <img class="hello-photo" src="carolina-2.jpg" alt="Carolina Sánchez" loading="lazy">
+      <div class="quote"><p data-i18n="quote">El tiempo pasa estés lista o no. Otras lo lograron. ¿Por qué no tú?</p></div>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow" data-i18n="hello_eyebrow">Hola, soy Carolina</div>
+      <h2 data-i18n="hello_title">Si llegaste aquí, probablemente sientes que es tu momento.</h2>
+      <p data-i18n="hello_p1">He tenido negocios, he formado a más de 200 profesionales y he aprendido que la experiencia de vida es materia prima. Hoy uso la inteligencia artificial para construir mi propia independencia económica, y enseño a otras mujeres a hacer lo mismo.</p>
+      <p data-i18n="hello_p2">Sin cuentos y sin promesas de dinero fácil: con método, con herramientas reales y a tu ritmo.</p>
+      <div class="sign">Carolina Sánchez</div>
+    </div>
+  </div>
+</section>
+
+<!-- PATHS -->
+<section id="caminos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="paths_eyebrow">Empieza aquí</div>
+      <h2 data-i18n-html="paths_title">¿Qué <span class="grad-text">necesitas</span> hoy?</h2>
+      <p data-i18n="paths_sub">Elige el camino que se parece a tu momento.</p>
+    </div>
+    <div class="paths">
+      <div class="path reveal">
+        <span class="tag" data-i18n="p1_tag">Gratis</span>
+        <div class="need" data-i18n="p1_need">“No sé por dónde empezar”</div>
+        <h3 data-i18n="p1_title">Descubre lo que tienes para ofrecer</h3>
+        <p data-i18n="p1_text">Una mentoría interactiva de 5 minutos que mira lo que has hecho en tu vida y te muestra por dónde podrías empezar. No necesitas estudios ni experiencia en redes.</p>
+        <a class="btn btn-grad" href="https://descubreconcarolina.com/" target="_blank" rel="noopener" data-track="path_quiz" data-i18n="p1_cta">Empezar gratis</a>
+      </div>
+      <div class="path reveal">
+        <span class="tag" data-i18n="p2_tag">Próximamente</span>
+        <div class="need" data-i18n="p2_need">“Quiero aprender a usar la IA”</div>
+        <h3 data-i18n="p2_title">IA práctica para tu negocio</h3>
+        <p data-i18n="p2_text">Cómo usar la inteligencia artificial para crear contenido, ofertas y productos digitales, explicado en español y sin tecnicismos.</p>
+        <a class="btn btn-ghost" href="#regalo" data-track="path_waitlist" data-i18n="p2_cta">Avísame cuando abra</a>
+      </div>
+      <div class="path reveal">
+        <span class="tag" data-i18n="p3_tag">Programa completo</span>
+        <div class="need" data-i18n="p3_need">“Quiero un sistema paso a paso”</div>
+        <h3 data-i18n="p3_title">Next Flight Academy</h3>
+        <p data-i18n="p3_text">La academia de negocios digitales para hispanohablantes en la que me formé y que recomiendo como afiliada. Te cuento si es para ti antes de que decidas.</p>
+        <a class="btn btn-ghost" href="#" data-wa="nfa" data-track="path_nfa" data-i18n="p3_cta">Hablemos por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="how_eyebrow">Cómo funciona</div>
+      <h2 data-i18n="how_title">Tres pasos, a tu ritmo</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3 data-i18n="s1_t">Descubre</h3><p data-i18n="s1_p">Responde la mentoría gratuita y ve lo que ya sabes hacer con otros ojos.</p></div>
+      <div class="step reveal"><div class="n">2</div><h3 data-i18n="s2_t">Elige</h3><p data-i18n="s2_p">Escoge una idea concreta y la forma más simple de ofrecerla.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3 data-i18n="s3_t">Construye</h3><p data-i18n="s3_p">Usa la inteligencia artificial para crear tu contenido y tu oferta, sin hacerlo sola.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="svc_eyebrow">Servicios</div>
+      <h2 data-i18n="svc_title">Lo que hacemos en Carolina Sanchez Group</h2>
+    </div>
+    <div class="services">
+      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h3 data-i18n="v1_t">Consultoría de marketing</h3><p data-i18n="v1_p">Estrategia digital para pequeños negocios y marcas personales.</p></div>
+      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></div><h3 data-i18n="v2_t">Contenido con IA</h3><p data-i18n="v2_p">Contenido y campañas creados con herramientas modernas de inteligencia artificial.</p></div>
+      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M6 6L5 3H2"/></svg></div><h3 data-i18n="v3_t">Afiliados y social commerce</h3><p data-i18n="v3_p">Marketing de afiliados y venta en redes sociales, incluido TikTok Shop.</p></div>
+      <div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c3 2 9 2 12 0v-5"/></svg></div><h3 data-i18n="v4_t">Formación en línea</h3><p data-i18n="v4_p">Productos digitales y programas que enseñan habilidades digitales prácticas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="creds">
+      <div class="cred reveal"><b>200+</b><span data-i18n="c1">profesionales formados</span></div>
+      <div class="cred reveal"><b data-i18n="c2b">Harvard</b><span data-i18n="c2">estudios de interpretación médica</span></div>
+      <div class="cred reveal"><b>BU</b><span data-i18n="c3">certificación de paralegal, Boston University</span></div>
+      <div class="cred reveal"><b>2</b><span data-i18n="c4">idiomas: español e inglés</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD -->
+<section id="regalo" style="padding-top:20px">
+  <div class="wrap">
+    <div class="lead-box reveal">
+      <div class="lead-left">
+        <div class="eyebrow" data-i18n="lead_eyebrow">Regalo gratis</div>
+        <h2 data-i18n-html="lead_title">Recibe tu <span class="grad-text">primer paso</span> en tu correo</h2>
+        <p data-i18n="lead_text">Déjame tus datos y te envío la mentoría gratuita, avisos de los nuevos programas y recursos para empezar con IA.</p>
+        <ul>
+          <li data-i18n="lead_b1">Mentoría interactiva “Descubre lo que tienes para ofrecer”</li>
+          <li data-i18n="lead_b2">Ideas prácticas de IA en español</li>
+          <li data-i18n="lead_b3">Primero en enterarte de los programas nuevos</li>
+        </ul>
+      </div>
+      <!-- FormSubmit envía cada registro al correo del negocio. La primera vez llega un email para activarlo. -->
+      <form id="leadForm" action="https://formsubmit.co/carolinasanchezgroup@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo contacto desde carolinasanchezgroup.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="idioma" id="langField" value="es">
+        <div><label for="fn" data-i18n="f_name">Nombre</label><input id="fn" name="nombre" required autocomplete="given-name"></div>
+        <div><label for="fe" data-i18n="f_email">Correo electrónico</label><input id="fe" type="email" name="email" required autocomplete="email"></div>
+        <div><label for="fw" data-i18n="f_wa">WhatsApp (opcional)</label><input id="fw" name="whatsapp" autocomplete="tel"></div>
+        <div><label for="fg" data-i18n="f_goal">¿Qué te gustaría lograr?</label>
+          <select id="fg" name="meta">
+            <option data-i18n="g1">Descubrir qué negocio puedo empezar</option>
+            <option data-i18n="g2">Aprender a usar la inteligencia artificial</option>
+            <option data-i18n="g3">Un sistema completo paso a paso</option>
+            <option data-i18n="g4">Contratar servicios de marketing</option>
+          </select></div>
+        <label class="consent"><input type="checkbox" required name="consentimiento" value="si"><span data-i18n="f_consent">Acepto recibir correos de Carolina Sanchez Group LLC. Puedo darme de baja cuando quiera. Mis datos no se venden.</span></label>
+        <button class="btn btn-grad" type="submit" data-track="lead_submit" data-i18n="f_btn">Quiero mi regalo</button>
+        <div class="ok" id="okMsg" data-i18n="f_ok">¡Listo! Revisa tu correo. Mientras tanto, empieza tu mentoría gratuita.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow" data-i18n="faq_eyebrow">Preguntas frecuentes</div><h2 data-i18n="faq_title">Lo que más me preguntan</h2></div>
+    <div class="faq">
+      <details class="reveal"><summary data-i18n="q1">¿Necesito saber de tecnología?</summary><p data-i18n="a1">No. Todo está explicado paso a paso y en español. Si sabes usar WhatsApp, puedes empezar.</p></details>
+      <details class="reveal"><summary data-i18n="q2">¿Cuánto tiempo necesito?</summary><p data-i18n="a2">La mentoría gratuita toma unos 5 minutos. Después avanzas a tu ritmo, en bloques cortos que caben en tu semana.</p></details>
+      <details class="reveal"><summary data-i18n="q3">¿Voy a ganar dinero?</summary><p data-i18n="a3">No prometo resultados económicos. Cada caso depende de tu dedicación, tu mercado y muchos otros factores. Lo que sí te doy es método, herramientas y acompañamiento.</p></details>
+      <details class="reveal"><summary data-i18n="q4">¿La mentoría gratuita guarda mis respuestas?</summary><p data-i18n="a4">No. Tus respuestas se quedan en tu teléfono. Solo te pido tu correo si quieres recibir el regalo.</p></details>
+      <details class="reveal"><summary data-i18n="q5">¿Qué es Next Flight Academy y qué relación tienes con ella?</summary><p data-i18n="a5">Es una academia de negocios digitales para hispanohablantes. Soy alumna y afiliada: si compras por mi recomendación, recibo una comisión. Siempre te digo con honestidad si creo que es para ti.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contacto" style="padding-top:20px">
+  <div class="wrap contact">
+    <div class="card reveal">
+      <h3>Carolina Sanchez Group LLC</h3>
+      <p>7901 4th St N, #33659<br>St. Petersburg, FL 33702</p>
+      <p><a href="tel:+15615363338">(561) 536-3338</a></p>
+      <p><a href="mailto:carolinasanchezgroup@gmail.com">carolinasanchezgroup@gmail.com</a></p>
+      <p style="margin-top:10px;font-size:13px" data-i18n="llc_note">Compañía de responsabilidad limitada registrada en Florida.</p>
+    </div>
+    <div class="card reveal">
+      <img src="carolina-3.jpg" alt="Carolina Sánchez" loading="lazy" style="width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center 30%;border:4px solid #fff;box-shadow:var(--shadow);margin-bottom:12px"><h3 data-i18n="talk_t">¿Prefieres hablar?</h3>
+      <p data-i18n="talk_p">Escríbeme por WhatsApp y te respondo personalmente.</p>
+      <a class="btn btn-grad" style="margin-top:14px" href="#" data-wa="general" data-track="contact_wa" data-i18n="talk_btn">Escribir por WhatsApp</a>
+      <p style="margin-top:16px"><a href="https://www.instagram.com/soycarolinasanchez.oficial/" target="_blank" rel="noopener" data-track="instagram">Instagram @soycarolinasanchez.oficial</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <span>© 2026 Carolina Sanchez Group LLC · <span data-i18n="foot_llc">Florida Limited Liability Company</span></span>
+      <span><a href="privacy.html" data-i18n="privacy">Privacidad</a><a href="terms.html" data-i18n="terms">Términos</a></span>
+    </div>
+    <p class="disclaimer" data-i18n="disclaimer">Aviso: el contenido de este sitio es educativo. No se garantizan ingresos ni resultados; los resultados dependen de cada persona. Algunos enlaces son de afiliado y Carolina Sanchez Group LLC puede recibir una comisión sin costo adicional para ti.</p>
+  </div>
+</footer>
+
+<a class="wa" href="#" data-wa="general" data-track="float_wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+
+<script>
+/* ===== CONFIGURACIÓN: cambiar aquí ===== */
+const WHATSAPP = "17815074539"; // número con WhatsApp Business (código de país + número, sin signos)
+/* ======================================= */
+
+const I18N = {
+en:{
+ topbar:'🎁 Free: discover which digital business you can start with what you already know · <a href="#regalo" data-track="topbar_gift">Start here</a>',
+ nav_paths:"Start here",nav_services:"Services",nav_about:"About",nav_contact:"Contact",
+ hero_eyebrow:"Digital business · Artificial intelligence",
+ hero_title:'Build your own income with a digital business and <span class="grad-text">artificial intelligence</span>',
+ hero_lead:"Starting over after 40 isn't starting late. It's starting with experience. I help you discover what you already know how to do and turn it into a digital business, step by step, with AI tools.",
+ hero_cta1:"Discover your business in 5 minutes →",hero_cta2:"See where to start",
+ trust1:"🇺🇸 <b>Registered company</b> in Florida",trust2:"💬 <b>English & Spanish</b>",trust3:"✨ <b>Free</b> to start",
+ chip1:"What you know has value",chip2:"AI is your tool",
+ quote:"Time passes whether you're ready or not. Others have done it. Why not you?",
+ hello_eyebrow:"Hi, I'm Carolina",hello_title:"If you're here, you probably feel it's your time.",
+ hello_p1:"I've run businesses, trained more than 200 professionals, and learned that life experience is raw material. Today I use artificial intelligence to build my own financial independence, and I teach other women to do the same.",
+ hello_p2:"No hype and no easy-money promises: a clear method, real tools, at your own pace.",
+ paths_eyebrow:"Start here",paths_title:'What do you <span class="grad-text">need</span> today?',paths_sub:"Choose the path that matches your moment.",
+ p1_tag:"Free",p1_need:"“I don't know where to start”",p1_title:"Discover what you have to offer",p1_text:"A 5-minute interactive mentoring that looks at what you've done in life and shows you where you could start. No degree or social media experience needed.",p1_cta:"Start for free",
+ p2_tag:"Coming soon",p2_need:"“I want to learn to use AI”",p2_title:"Practical AI for your business",p2_text:"How to use artificial intelligence to create content, offers and digital products, explained simply.",p2_cta:"Notify me",
+ p3_tag:"Full program",p3_need:"“I want a step-by-step system”",p3_title:"Next Flight Academy",p3_text:"The Spanish-language digital business academy where I trained and that I recommend as an affiliate. I'll tell you if it's right for you before you decide.",p3_cta:"Let's talk on WhatsApp",
+ how_eyebrow:"How it works",how_title:"Three steps, at your pace",
+ s1_t:"Discover",s1_p:"Take the free mentoring and see what you already know with new eyes.",
+ s2_t:"Choose",s2_p:"Pick one concrete idea and the simplest way to offer it.",
+ s3_t:"Build",s3_p:"Use artificial intelligence to create your content and your offer, without doing it alone.",
+ svc_eyebrow:"Services",svc_title:"What we do at Carolina Sanchez Group",
+ v1_t:"Marketing consulting",v1_p:"Digital strategy for small businesses and personal brands.",
+ v2_t:"AI-powered content",v2_p:"Content and campaigns created with modern AI tools.",
+ v3_t:"Affiliate & social commerce",v3_p:"Affiliate marketing and social selling, including TikTok Shop.",
+ v4_t:"Online training",v4_p:"Digital products and programs that teach practical digital skills.",
+ c1:"professionals trained",c2b:"Harvard",c2:"medical interpreting studies",c3:"paralegal certification, Boston University",c4:"languages: English & Spanish",
+ lead_eyebrow:"Free gift",lead_title:'Get your <span class="grad-text">first step</span> by email',lead_text:"Leave your details and I'll send you the free mentoring, news about new programs and resources to get started with AI.",
+ lead_b1:"Interactive mentoring “Discover what you have to offer”",lead_b2:"Practical AI ideas",lead_b3:"Be first to hear about new programs",
+ f_name:"Name",f_email:"Email",f_wa:"WhatsApp (optional)",f_goal:"What would you like to achieve?",
+ g1:"Discover which business I can start",g2:"Learn to use artificial intelligence",g3:"A complete step-by-step system",g4:"Hire marketing services",
+ f_consent:"I agree to receive emails from Carolina Sanchez Group LLC. I can unsubscribe anytime. My data is never sold.",
+ f_btn:"Send me my gift",f_ok:"Done! Check your email. Meanwhile, start your free mentoring.",
+ faq_eyebrow:"FAQ",faq_title:"What people ask me most",
+ q1:"Do I need to know technology?",a1:"No. Everything is explained step by step. If you can use WhatsApp, you can start.",
+ q2:"How much time do I need?",a2:"The free mentoring takes about 5 minutes. Then you move at your own pace, in short blocks that fit your week.",
+ q3:"Will I make money?",a3:"I don't promise financial results. Every case depends on your effort, your market and many other factors. What I do give you is a method, tools and guidance.",
+ q4:"Does the free mentoring store my answers?",a4:"No. Your answers stay on your phone. I only ask for your email if you want to receive the gift.",
+ q5:"What is Next Flight Academy and how are you related to it?",a5:"It's a digital business academy for Spanish speakers. I'm a student and an affiliate: if you buy on my recommendation, I receive a commission. I'll always tell you honestly whether I think it's right for you.",
+ llc_note:"Limited liability company registered in Florida.",talk_t:"Prefer to talk?",talk_p:"Message me on WhatsApp and I'll reply personally.",talk_btn:"Message on WhatsApp",
+ foot_llc:"Florida Limited Liability Company",privacy:"Privacy",terms:"Terms",
+ disclaimer:"Notice: the content on this site is educational. Income and results are not guaranteed and depend on each person. Some links are affiliate links and Carolina Sanchez Group LLC may receive a commission at no extra cost to you."
+}};
+const ES = {};
+document.querySelectorAll('[data-i18n]').forEach(e=>ES[e.dataset.i18n]=e.textContent);
+document.querySelectorAll('[data-i18n-html]').forEach(e=>ES[e.dataset.i18nHtml]=e.innerHTML);
+I18N.es = ES;
+const WA_MSG = {
+ es:{general:"Hola Carolina, vengo de tu página web y me gustaría saber más.",nfa:"Hola Carolina, quiero saber si Next Flight Academy es para mí."},
+ en:{general:"Hi Carolina, I found your website and I'd like to know more.",nfa:"Hi Carolina, I'd like to know if Next Flight Academy is right for me."}};
+let LANG='es';
+function setLang(l){
+  LANG=l; document.documentElement.lang=l;
+  const d=I18N[l];
+  document.querySelectorAll('[data-i18n]').forEach(e=>{if(d[e.dataset.i18n]!==undefined)e.textContent=d[e.dataset.i18n]});
+  document.querySelectorAll('[data-i18n-html]').forEach(e=>{if(d[e.dataset.i18nHtml]!==undefined)e.innerHTML=d[e.dataset.i18nHtml]});
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  document.getElementById('langField').value=l;
+  document.querySelectorAll('[data-wa]').forEach(a=>{a.href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(WA_MSG[l][a.dataset.wa]);a.target="_blank";a.rel="noopener"});
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{setLang(b.dataset.lang);track('lang_'+b.dataset.lang)});
+let saved='es';try{saved=localStorage.getItem('lang')||'es'}catch(e){}
+setLang(saved);
+
+/* Medición: listo para Google Analytics 4 / Meta Pixel (se pegan sus códigos en <head>) */
+window.dataLayer=window.dataLayer||[];
+function track(name){window.dataLayer.push({event:name});if(window.gtag)gtag('event',name);if(window.fbq&&/lead_submit/.test(name))fbq('track','Lead');}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-track]');if(t)track(t.dataset.track)});
+
+/* Formulario sin salir de la página */
+document.getElementById('leadForm').addEventListener('submit',async e=>{
+  e.preventDefault(); const f=e.target; const btn=f.querySelector('button');
+  btn.disabled=true;
+  try{await fetch("https://formsubmit.co/ajax/carolinasanchezgroup@gmail.com",{method:"POST",headers:{Accept:"application/json"},body:new FormData(f)});}catch(err){}
+  document.getElementById('okMsg').style.display='block'; btn.style.display='none';
+  setTimeout(()=>window.open('https://descubreconcarolina.com/','_blank'),1800);
+});
+
+/* Animaciones suaves al bajar */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
