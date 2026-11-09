@@ -94,6 +94,19 @@ section{padding:80px 0}
 .path p{color:var(--muted);font-size:15px;flex:1}
 .tag{align-self:flex-start;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:#E6F1EF;color:#0F5C5C}
 @media(max-width:860px){.paths{grid-template-columns:1fr}}
+.quiz{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:36px;position:relative;overflow:hidden}
+.quiz:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--grad)}
+.qz-bar{height:6px;background:#EEF5F3;border-radius:99px;margin-bottom:22px;overflow:hidden}.qz-bar i{display:block;height:100%;background:var(--grad);transition:width .4s}
+.qz-step{font-size:12px;font-weight:600;color:var(--gold);letter-spacing:.12em;text-transform:uppercase}
+.qz-q{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(26px,3.4vw,34px);margin:8px 0 20px;line-height:1.15}
+.qz-opts{display:grid;gap:12px}
+.qz-opt{text-align:left;background:#FAF8F5;border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;font:500 15px Montserrat,sans-serif;color:var(--ink);cursor:pointer;transition:all .2s}
+.qz-opt:hover,.qz-opt:focus{border-color:#2F8A84;background:#EEF5F3;transform:translateX(4px);outline:none}
+.qz-res{animation:qzin .5s ease}.qz-res h3{font-size:clamp(28px,3.6vw,38px);margin:8px 0 12px}.qz-res p{color:var(--muted);margin-bottom:18px}
+.qz-again{background:none;border:0;color:var(--muted);font:500 14px Montserrat,sans-serif;text-decoration:underline;cursor:pointer;margin-top:14px;display:block}
+@keyframes qzin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:600px){.quiz{padding:26px 20px}}
+.dl{display:none;margin-top:12px}
 
 /* how */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
@@ -167,13 +180,13 @@ footer{border-top:1px solid var(--line);padding:34px 0 100px;font-size:13px;colo
 </head>
 <body>
 
-<div class="topbar" data-i18n-html="topbar">🎁 Gratis: descubre qué negocio digital puedes empezar con lo que ya sabes · <a href="#regalo" data-track="topbar_gift">Hazlo aquí</a></div>
+<div class="topbar" data-i18n-html="topbar">🎁 Gratis: la guía “Tu asistente de IA” · 7 instrucciones para empezar · <a href="#regalo" data-track="topbar_gift">Descárgala aquí</a></div>
 
 <header>
   <div class="wrap nav">
     <a class="logo" href="#">Carolina <span>Sánchez</span></a>
     <nav class="nav-links">
-      <a href="#caminos" data-i18n="nav_paths">Empieza aquí</a>
+      <a href="#test" data-i18n="nav_paths">Empieza aquí</a>
       <a href="#servicios" data-i18n="nav_services">Servicios</a>
       <a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a>
       <a href="#contacto" data-i18n="nav_contact">Contacto</a>
@@ -233,6 +246,18 @@ footer{border-top:1px solid var(--line);padding:34px 0 100px;font-size:13px;colo
   </div>
 </section>
 
+<!-- QUIZ -->
+<section id="test" style="padding-bottom:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" data-i18n="qz_eyebrow">Test de 1 minuto</div>
+      <h2 data-i18n-html="qz_title">¿Cuál es tu <span class="grad-text">primer paso</span>?</h2>
+      <p data-i18n="qz_sub">Tres preguntas. Sin registrarte. Te digo por dónde empezar.</p>
+    </div>
+    <div class="quiz reveal" id="quiz" aria-live="polite"></div>
+  </div>
+</section>
+
 <!-- PATHS -->
 <section id="caminos">
   <div class="wrap">
@@ -250,11 +275,11 @@ footer{border-top:1px solid var(--line);padding:34px 0 100px;font-size:13px;colo
         <a class="btn btn-grad" href="https://descubreconcarolina.com/" target="_blank" rel="noopener" data-track="path_quiz" data-i18n="p1_cta">Empezar gratis</a>
       </div>
       <div class="path reveal">
-        <span class="tag" data-i18n="p2_tag">Próximamente</span>
+        <span class="tag" data-i18n="p2_tag">Gratis · PDF</span>
         <div class="need" data-i18n="p2_need">“Quiero aprender a usar la IA”</div>
-        <h3 data-i18n="p2_title">IA práctica para tu negocio</h3>
-        <p data-i18n="p2_text">Cómo usar la inteligencia artificial para crear contenido, ofertas y productos digitales, explicado en español y sin tecnicismos.</p>
-        <a class="btn btn-ghost" href="#regalo" data-track="path_waitlist" data-i18n="p2_cta">Avísame cuando abra</a>
+        <h3 data-i18n="p2_title">Guía: Tu asistente de IA</h3>
+        <p data-i18n="p2_text">7 instrucciones listas para copiar y pegar, una por día, para usar la inteligencia artificial en tu negocio digital. En español y sin tecnicismos.</p>
+        <a class="btn btn-ghost" href="#regalo" data-track="path_guide" data-i18n="p2_cta">Quiero la guía gratis</a>
       </div>
       <div class="path reveal">
         <span class="tag" data-i18n="p3_tag">Programa completo</span>
@@ -316,11 +341,11 @@ footer{border-top:1px solid var(--line);padding:34px 0 100px;font-size:13px;colo
     <div class="lead-box reveal">
       <div class="lead-left">
         <div class="eyebrow" data-i18n="lead_eyebrow">Regalo gratis</div>
-        <h2 data-i18n-html="lead_title">Recibe tu <span class="grad-text">primer paso</span> en tu correo</h2>
-        <p data-i18n="lead_text">Déjame tus datos y te envío la mentoría gratuita, avisos de los nuevos programas y recursos para empezar con IA.</p>
+        <h2 data-i18n-html="lead_title">Descarga gratis <span class="grad-text">Tu asistente de IA</span></h2>
+        <p data-i18n="lead_text">7 días, 7 instrucciones para usar ChatGPT, Claude o Gemini en tu negocio, empezando por lo que ya sabes. Déjame tus datos y la descargas al instante.</p>
         <ul>
-          <li data-i18n="lead_b1">Mentoría interactiva “Descubre lo que tienes para ofrecer”</li>
-          <li data-i18n="lead_b2">Ideas prácticas de IA en español</li>
+          <li data-i18n="lead_b1">Guía PDF “Tu asistente de IA”: 7 instrucciones para copiar y pegar</li>
+          <li data-i18n="lead_b2">La mentoría interactiva “Descubre lo que tienes para ofrecer”</li>
           <li data-i18n="lead_b3">Primero en enterarte de los programas nuevos</li>
         </ul>
       </div>
@@ -342,8 +367,10 @@ footer{border-top:1px solid var(--line);padding:34px 0 100px;font-size:13px;colo
             <option data-i18n="g4">Contratar servicios de marketing</option>
           </select></div>
         <label class="consent"><input type="checkbox" required name="consentimiento" value="si"><span data-i18n="f_consent">Acepto recibir correos de Carolina Sanchez Group LLC. Puedo darme de baja cuando quiera. Mis datos no se venden.</span></label>
-        <button class="btn btn-grad" type="submit" data-track="lead_submit" data-i18n="f_btn">Quiero mi regalo</button>
-        <div class="ok" id="okMsg" data-i18n="f_ok">¡Listo! Revisa tu correo. Mientras tanto, empieza tu mentoría gratuita.</div>
+        <button class="btn btn-grad" type="submit" data-track="lead_submit" data-i18n="f_btn">Descargar mi guía gratis</button>
+        <div class="ok" id="okMsg" data-i18n="f_ok">¡Listo! Aquí tienes tu guía. Empieza hoy con el Día 1.</div>
+        <a class="btn btn-grad dl" id="dlBtn" href="guia-ia-carolina.pdf" target="_blank" rel="noopener" data-track="guide_download" data-i18n="f_dl">Abrir mi guía (PDF) →</a>
+        <a class="btn btn-ghost dl" id="dlQuiz" href="https://descubreconcarolina.com/" target="_blank" rel="noopener" data-track="lead_quiz" data-i18n="f_quiz">Hacer la mentoría gratuita</a>
       </form>
     </div>
   </div>
@@ -402,7 +429,8 @@ const WHATSAPP = "17815074539"; // número con WhatsApp Business (código de pa�
 
 const I18N = {
 en:{
- topbar:'🎁 Free: discover which digital business you can start with what you already know · <a href="#regalo" data-track="topbar_gift">Start here</a>',
+ topbar:'🎁 Free: the “Your AI Assistant” guide · 7 prompts to get started · <a href="#regalo" data-track="topbar_gift">Download it here</a>',
+ qz_eyebrow:"1-minute quiz",qz_title:'What is your <span class="grad-text">first step</span>?',qz_sub:"Three questions. No sign-up. I'll tell you where to start.",
  nav_paths:"Start here",nav_services:"Services",nav_about:"About",nav_contact:"Contact",
  hero_eyebrow:"Digital business · Artificial intelligence",
  hero_title:'Build your own income with a digital business and <span class="grad-text">artificial intelligence</span>',
@@ -416,7 +444,7 @@ en:{
  hello_p2:"No hype and no easy-money promises: a clear method, real tools, at your own pace.",
  paths_eyebrow:"Start here",paths_title:'What do you <span class="grad-text">need</span> today?',paths_sub:"Choose the path that matches your moment.",
  p1_tag:"Free",p1_need:"“I don't know where to start”",p1_title:"Discover what you have to offer",p1_text:"A 5-minute interactive mentoring that looks at what you've done in life and shows you where you could start. No degree or social media experience needed.",p1_cta:"Start for free",
- p2_tag:"Coming soon",p2_need:"“I want to learn to use AI”",p2_title:"Practical AI for your business",p2_text:"How to use artificial intelligence to create content, offers and digital products, explained simply.",p2_cta:"Notify me",
+ p2_tag:"Free · PDF",p2_need:"“I want to learn to use AI”",p2_title:"Guide: Your AI Assistant",p2_text:"7 copy-and-paste prompts, one per day, to use artificial intelligence in your digital business. Simple, no jargon. (Guide in Spanish.)",p2_cta:"Get the free guide",
  p3_tag:"Full program",p3_need:"“I want a step-by-step system”",p3_title:"Next Flight Academy",p3_text:"The Spanish-language digital business academy where I trained and that I recommend as an affiliate. I'll tell you if it's right for you before you decide.",p3_cta:"Let's talk on WhatsApp",
  how_eyebrow:"How it works",how_title:"Three steps, at your pace",
  s1_t:"Discover",s1_p:"Take the free mentoring and see what you already know with new eyes.",
@@ -428,12 +456,12 @@ en:{
  v3_t:"Affiliate & social commerce",v3_p:"Affiliate marketing and social selling, including TikTok Shop.",
  v4_t:"Online training",v4_p:"Digital products and programs that teach practical digital skills.",
  c1:"professionals trained",c2b:"Harvard",c2:"medical interpreting studies",c3:"paralegal certification, Boston University",c4:"languages: English & Spanish",
- lead_eyebrow:"Free gift",lead_title:'Get your <span class="grad-text">first step</span> by email',lead_text:"Leave your details and I'll send you the free mentoring, news about new programs and resources to get started with AI.",
- lead_b1:"Interactive mentoring “Discover what you have to offer”",lead_b2:"Practical AI ideas",lead_b3:"Be first to hear about new programs",
+ lead_eyebrow:"Free gift",lead_title:'Download <span class="grad-text">Your AI Assistant</span> free',lead_text:"7 days, 7 prompts to use ChatGPT, Claude or Gemini in your business, starting with what you already know. Leave your details and download it instantly (guide in Spanish).",
+ lead_b1:"PDF guide “Your AI Assistant”: 7 copy-and-paste prompts",lead_b2:"The interactive mentoring “Discover what you have to offer”",lead_b3:"Be first to hear about new programs",
  f_name:"Name",f_email:"Email",f_wa:"WhatsApp (optional)",f_goal:"What would you like to achieve?",
  g1:"Discover which business I can start",g2:"Learn to use artificial intelligence",g3:"A complete step-by-step system",g4:"Hire marketing services",
  f_consent:"I agree to receive emails from Carolina Sanchez Group LLC. I can unsubscribe anytime. My data is never sold.",
- f_btn:"Send me my gift",f_ok:"Done! Check your email. Meanwhile, start your free mentoring.",
+ f_btn:"Download my free guide",f_ok:"Done! Here is your guide. Start today with Day 1.",f_dl:"Open my guide (PDF) →",f_quiz:"Take the free mentoring",
  faq_eyebrow:"FAQ",faq_title:"What people ask me most",
  q1:"Do I need to know technology?",a1:"No. Everything is explained step by step. If you can use WhatsApp, you can start.",
  q2:"How much time do I need?",a2:"The free mentoring takes about 5 minutes. Then you move at your own pace, in short blocks that fit your week.",
@@ -461,8 +489,42 @@ function setLang(l){
   document.getElementById('langField').value=l;
   document.querySelectorAll('[data-wa]').forEach(a=>{a.href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(WA_MSG[l][a.dataset.wa]);a.target="_blank";a.rel="noopener"});
   try{localStorage.setItem('lang',l)}catch(e){}
+  if(window.renderQuiz)renderQuiz();
 }
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{setLang(b.dataset.lang);track('lang_'+b.dataset.lang)});
+/* ===== Test de 1 minuto ===== */
+const QZ={
+ es:{step:"Pregunta",of:"de",again:"Volver a empezar",
+  qs:[{q:"¿Dónde estás hoy?",o:[["No sé qué podría ofrecer","d"],["Sé qué ofrecer, pero no sé cómo empezar en digital","a"],["Quiero un sistema completo con acompañamiento","n"]]},
+      {q:"¿Cómo te llevas con la tecnología?",o:[["Me cuesta, necesito todo paso a paso","d"],["Me defiendo y quiero usar mejor la IA","a"],["Me siento cómoda y quiero avanzar rápido","n"]]},
+      {q:"¿Cuánto tiempo tienes a la semana?",o:[["Menos de 2 horas","a"],["Entre 2 y 5 horas","d"],["Más de 5 horas","n"]]}],
+  r:{d:{t:"Tu primer paso: descubrir lo que ya tienes",p:"Antes de pensar en redes o en herramientas, necesitas ver con claridad qué sabes hacer y a quién le sirve. La mentoría gratuita te lo muestra en 5 minutos, sin registrarte.",c:"Hacer la mentoría gratuita →",h:"https://descubreconcarolina.com/",x:1,k:"quiz_result_discover"},
+     a:{t:"Tu primer paso: la IA como tu asistente",p:"Ya tienes algo que ofrecer. Lo que te falta es un método para crear tu contenido y tu oferta sin hacerlo sola. Mi guía gratuita te da 7 instrucciones listas para copiar y pegar, una por día.",c:"Descargar la guía gratis →",h:"#regalo",x:0,k:"quiz_result_ai"},
+     n:{t:"Tu primer paso: un sistema completo",p:"Estás lista para avanzar con un método paso a paso y acompañamiento. Escríbeme y te digo con honestidad si Next Flight Academy es para ti. Soy alumna y afiliada: si entras por mi recomendación, recibo una comisión.",c:"Hablemos por WhatsApp →",w:"nfa",k:"quiz_result_nfa"}}},
+ en:{step:"Question",of:"of",again:"Start over",
+  qs:[{q:"Where are you today?",o:[["I don't know what I could offer","d"],["I know what to offer, but not how to start online","a"],["I want a complete system with guidance","n"]]},
+      {q:"How do you get along with technology?",o:[["It's hard for me, I need everything step by step","d"],["I manage, and I want to use AI better","a"],["I'm comfortable and want to move fast","n"]]},
+      {q:"How much time do you have per week?",o:[["Less than 2 hours","a"],["Between 2 and 5 hours","d"],["More than 5 hours","n"]]}],
+  r:{d:{t:"Your first step: discover what you already have",p:"Before thinking about social media or tools, you need to see clearly what you know how to do and who it helps. The free mentoring shows you in 5 minutes, no sign-up.",c:"Take the free mentoring →",h:"https://descubreconcarolina.com/",x:1,k:"quiz_result_discover"},
+     a:{t:"Your first step: AI as your assistant",p:"You already have something to offer. What's missing is a method to create your content and your offer without doing it alone. My free guide gives you 7 copy-and-paste prompts, one per day.",c:"Download the free guide →",h:"#regalo",x:0,k:"quiz_result_ai"},
+     n:{t:"Your first step: a complete system",p:"You're ready to move forward with a step-by-step method and guidance. Message me and I'll tell you honestly whether Next Flight Academy is right for you. I'm a student and affiliate: if you join on my recommendation, I receive a commission.",c:"Let's talk on WhatsApp →",w:"nfa",k:"quiz_result_nfa"}}}};
+let qzI=0,qzA=[];
+function renderQuiz(){
+  const box=document.getElementById('quiz');if(!box)return;const L=QZ[LANG];
+  if(qzI<L.qs.length){
+    const Q=L.qs[qzI];
+    box.innerHTML=`<div class="qz-bar"><i style="width:${(qzI/L.qs.length)*100+8}%"></i></div><div class="qz-step">${L.step} ${qzI+1} ${L.of} ${L.qs.length}</div><div class="qz-q">${Q.q}</div><div class="qz-opts">${Q.o.map((o,i)=>`<button class="qz-opt" data-i="${i}">${o[0]}</button>`).join('')}</div>`;
+    box.querySelectorAll('.qz-opt').forEach(b=>b.onclick=()=>{qzA.push(Q.o[b.dataset.i][1]);if(qzI===0)track('quiz_start');qzI++;renderQuiz();});
+  }else{
+    const c={d:0,a:0,n:0};qzA.forEach(x=>c[x]++);let best=qzA[0];for(const k in c)if(c[k]>c[best])best=k;
+    const R=L.r[best];
+    const href=R.w?"https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(WA_MSG[LANG][R.w]):R.h;
+    const ext=R.w||R.x?' target="_blank" rel="noopener"':'';
+    box.innerHTML=`<div class="qz-bar"><i style="width:100%"></i></div><div class="qz-res"><div class="qz-step">✨</div><h3>${R.t}</h3><p>${R.p}</p><a class="btn btn-grad" href="${href}"${ext} data-track="${R.k}_cta">${R.c}</a><button class="qz-again">${L.again}</button></div>`;
+    box.querySelector('.qz-again').onclick=()=>{qzI=0;qzA=[];renderQuiz();};
+    if(!box.dataset.done){track(R.k);box.dataset.done=1;}
+  }
+}
 let saved='es';try{saved=localStorage.getItem('lang')||'es'}catch(e){}
 setLang(saved);
 
@@ -477,7 +539,8 @@ document.getElementById('leadForm').addEventListener('submit',async e=>{
   btn.disabled=true;
   try{await fetch("https://formsubmit.co/ajax/carolinasanchezgroup@gmail.com",{method:"POST",headers:{Accept:"application/json"},body:new FormData(f)});}catch(err){}
   document.getElementById('okMsg').style.display='block'; btn.style.display='none';
-  setTimeout(()=>window.open('https://descubreconcarolina.com/','_blank'),1800);
+  document.getElementById('dlBtn').style.display='inline-flex'; document.getElementById('dlQuiz').style.display='inline-flex';
+  track('guide_unlocked');
 });
 
 /* Animaciones suaves al bajar */
